@@ -712,7 +712,7 @@ async function toggleCam(){
       cam = await tf.data.webcam(document.getElementById("cam"), {resizeWidth: cropWidth, resizeHeight: cropHeight, centerCrop: true});
     }
     catch(error){
-      alert("Access to webcam reqiured");
+      alert("Please give access to webcam and refresh");
     }
   }
 }
