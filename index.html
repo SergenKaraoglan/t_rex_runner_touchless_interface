@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Play t-rex runner using your webcam as a controller">
         <!-- t-rex runner -->
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
@@ -8,31 +11,32 @@
             <link rel="stylesheet" href="trex.css">
             <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
             <script src="trex.js"></script>
+            
         <!-- -->
 
         <!-- stylesheet for machine learning -->
         <link rel="stylesheet" type="text/css" href="index.css">
     
         <!-- loads tensorflow.js library -->
-        <!-- <script src="packages/tf.min.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/3.8.0/tf.min.js"></script>
     
         <!-- loads CNN model -->
-        <script src="packages/mobilenet.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0/dist/mobilenet.min.js"></script>
     
         <!-- chartjs used for post processing -->
         <script src="packages/Chart.bundle.min.js"></script>
     </head>
 
     <body>
-        <div>
-        <!-- <h2>Play Chromium's T-rex Runner with your webcam by training your own neural network</h2> -->
-        </div>
-
+        <noscript>Javascript required</noscript>
+        <header>
+            <h2>Play Chromium's T-rex Runner with your webcam by training your own neural network</h2>
+        </header>
+        
          <!-- t-rex runner -->
          <div id="t" class="offline">
             <div id="messageBox" class="sendmessage">
-                 <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Train neural network and invoke jump action with webcam to begin</h1>
+                 <h3 style="text-align: center;">Train neural network and invoke jump action with webcam to begin</h3>
                  <div class="niokbutton" onclick="okbuttonsend()"></div>
             </div>
             <div id="main-frame-error" class="interstitial-wrapper">
@@ -49,16 +53,15 @@
                     </template> 
                 </div>
             </div>
-            <a href="https://source.chromium.org/chromium/chromium/src/+/master:components/neterror/resources/offline.js;l=7?q=t-rex%20package:%5Echromium$&ss=chromium&originalUrl=https:%2F%2Fcs.chromium.org%2Fchromium%2Fsrc%2Fcomponents%2Fneterror%2Fresources%2Foffline.js" target="_blank"><strong>T-rex runner source</strong></a>
-            <a href="https://github.com/SergenKaraoglan/t_rex_runner_touchless_interface" target="_blank"><strong>Github</strong></a>
         </div>
 
-        <!-- -->
+        <a `rel="noopener" href="https://source.chromium.org/chromium/chromium/src/+/master:components/neterror/resources/offline.js;l=7?q=t-rex%20package:%5Echromium$&ss=chromium&originalUrl=https:%2F%2Fcs.chromium.org%2Fchromium%2Fsrc%2Fcomponents%2Fneterror%2Fresources%2Foffline.js" target="_blank"><strong>T-rex runner source</strong></a>
+        <a `rel="noopener" href="https://github.com/SergenKaraoglan/t_rex_runner_touchless_interface" target="_blank"><strong>Github</strong></a>
 
 
         <!-- container used to display content whilst page is loading -->
         <div id = "loading">
-            <h1>Loading <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> </h1>
+            <h3>Loading <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> </h3>
         </div>
 
         <div id = "errorDiv">
