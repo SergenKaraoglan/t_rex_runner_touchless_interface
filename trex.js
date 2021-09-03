@@ -643,16 +643,10 @@
             document.addEventListener(Runner.events.DOWNACTION, this);
             document.addEventListener(Runner.events.NOACTION, this);
 
-            if (IS_MOBILE) {
-                // Mobile only touch devices.
-                this.touchController.addEventListener(Runner.events.TOUCHSTART, this);
-                this.touchController.addEventListener(Runner.events.TOUCHEND, this);
-                this.containerEl.addEventListener(Runner.events.TOUCHSTART, this);
-            } else {
-                // Mouse.
-                document.addEventListener(Runner.events.MOUSEDOWN, this);
-                document.addEventListener(Runner.events.MOUSEUP, this);
-            }
+
+            // Mouse.
+            document.addEventListener(Runner.events.MOUSEDOWN, this);
+            document.addEventListener(Runner.events.MOUSEUP, this);
         },
 
         /** !!!!
